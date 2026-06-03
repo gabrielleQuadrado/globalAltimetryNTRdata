@@ -6,7 +6,7 @@ This repository contains derived datasets used in the analysis in:
 
 ## Repository Overview
 
-This data release provides tide gauge–satellite altimetry matched nontidal residual (NTR) datasets used to evaluate the ability of along-track satellite altimetry products to reproduce tide gauge-derived nontidal residual variability along global coastlines.
+This data release provides tide gauge–satellite altimetry matched nontidal residual (NTR) datasets used to evaluate the ability of along-track satellite altimetry products to reproduce tide gauge-derived nontidal residual variability (NTR<sub>TG</sub>) along global coastlines.
 
 The datasets include satellite-derived nontidal residual (NTR<sub>SAT</sub>) time series from three altimetry products:
 
