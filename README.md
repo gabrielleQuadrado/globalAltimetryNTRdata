@@ -83,10 +83,6 @@ Each `.mat` file contains:
 
 Extreme NTRTG values are defined as hourly exceedances above percentile thresholds of the empirical NTRTG distribution.
 
-## Quality control
-
-Problematic tide gauges identified during quality control were removed before release. The released files therefore only include tide gauge records retained for analysis after these checks.
-
 ## Documentation
 
 A data dictionary describing the file contents, variables, and units is available here:
