@@ -1,6 +1,6 @@
 # Global Tide Gauge-Satellite Altimetry Nontidal Residual (NTR) Data Release
 
-This repository contains derived datasets used in the analysis in:
+This repository contains derived datasets used in the analyses in:
 
 **Quadrado, G. P., Wahl, T., Enriquez, A. R., Nagaraj, M., Passaro, M., & Haigh, I. D.** Global Assessment of Satellite Altimetry for Observing Extreme Coastal Sea Levels. *Communications Earth & Environment*.
 
