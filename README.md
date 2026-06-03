@@ -4,13 +4,13 @@ This repository contains derived datasets supporting the analysis in:
 
 **Quadrado, G. P., Wahl, T., Enriquez, A. R., Nagaraj, M., Passaro, M., & Haigh, I. D.** Global Assessment of Satellite Altimetry for Observing Extreme Coastal Sea Levels. *Communications Earth & Environment*.
 
-## Repository overview
+## Repository Overview
 
-This data release provides tide gauge–satellite altimetry matched nontidal residual (NTR) datasets used to evaluate the ability of along-track satellite altimetry products to reproduce tide gauge-derived nontidal residual variability and extremes along global coastlines.
+This data release provides tide gauge–satellite altimetry matched nontidal residual (NTR) datasets used to evaluate the ability of along-track satellite altimetry products to reproduce tide gauge-derived nontidal residual variability along global coastlines.
 
-The datasets include NTR comparisons between tide gauge-derived nontidal residuals (NTRTG) and satellite-derived nontidal residuals (NTRSAT) from three altimetry products:
+The datasets include satellite-derived nontidal residual (NTRSAT) time series from three altimetry products:
 
-* Copernicus Marine Service L3 Sea Surface Heights (CMEMS)
+* Copernicus Marine Service L3 Sea Surface Heights (CMEMS) 
 * X-TRACK L2P v2.2 Sea Level Anomaly (X-TRACK)
 * Adaptive Leading Edge Subwaveform Sea Surface Heights v56 (ALES)
 
@@ -20,7 +20,7 @@ The data release includes:
 * product-specific NTRTG–NTRSAT matched time series used for analyses that do not require common timestamps across products;
 * tide gauge-based NTRTG percentile thresholds used to identify extreme nontidal residual values.
 
-## Repository structure
+## Repository Structure
 
 ```text
 data/
@@ -35,7 +35,7 @@ docs/
 └── DATA_DICTIONARY.md
 ```
 
-## Data folders
+## Data Folders
 
 | Folder                                                                                       | Description                                                                                                                   |
 | -------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
@@ -47,7 +47,7 @@ docs/
 | [`data/03_tg_percentile_thresholds/`](data/03_tg_percentile_thresholds/)                     | Tide gauge-based percentile thresholds used to define extreme NTRTG values.                                                   |
 | [`docs/DATA_DICTIONARY.md`](docs/DATA_DICTIONARY.md)                                         | Description of file contents, variables, and units.                                                                           |
 
-## Dataset descriptions
+## Dataset Descriptions
 
 ### Common-timestamp product comparison files
 
