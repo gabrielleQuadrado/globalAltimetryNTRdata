@@ -39,14 +39,14 @@ docs/
 
 ### Common-Timestamp Matched NTR<sub>TG</sub>–NTR<sub>SAT</sub> Time Series
 
-[`data/01_matched_common_timestamps/`](data/01_matched_common_timestamps/) contains individual tide gauge site-level `.mat` files used for direct comparison of CMEMS, X-TRACK, and ALES. Each file includes matched tide gauge-derived nontidal residuals (NTR<sub>TG</sub>) and satellite-derived nontidal residuals (NTR<sub>SAT</sub>) from all three products at common coincident timestamps.
+[`data/01_matched_common_timestamps/`](data/01_matched_common_timestamps/) contains individual tide gauge site-level `.mat` files used for direct comparison of CMEMS, X-TRACK, and ALES. Each file includes matched tide gauge-derived nontidal residuals (NTR<sub>TG</sub>) and satellite-derived nontidal residuals (NTR<sub>SAT</sub>) time series from all three products at common coincident timestamps.
 
 These files are intended for analyses where all three satellite altimetry products are compared using the same tide gauge sites and the same matched times.
 
 Each `.mat` file contains a MATLAB structure named `stats`, including:
 
-* NTR<sub>TG</sub> values from the tide gauge record;
-* NTR<sub>SAT</sub> values from ALES, X-TRACK, and CMEMS;
+* NTR<sub>TG</sub> values from the tide gauge record in meters;
+* NTR<sub>SAT</sub> values from ALES, X-TRACK, and CMEMS in meters;
 * common timestamps shared by the tide gauge record and all three satellite products;
 * product-specific performance statistics.
 
@@ -58,8 +58,8 @@ These files are intended for analyses where each satellite product is evaluated 
 
 Each `.mat` file contains a MATLAB structure named `stats`, including:
 
-* NTR<sub>TG</sub> values from the tide gauge record;
-* NTR<sub>SAT</sub> values from one satellite altimetry product;
+* NTR<sub>TG</sub> values from the tide gauge record in meters;
+* NTR<sub>SAT</sub> values from one satellite altimetry product in meters;
 * matched timestamps for the NTR<sub>TG</sub>–NTR<sub>SAT</sub> pairs;
 * performance metrics, including Pearson correlation coefficient, root-mean-square error, bias, Kling-Gupta efficiency, and Modified Mielke Index.
 
