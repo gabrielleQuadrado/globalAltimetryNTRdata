@@ -1,4 +1,4 @@
-# Global Satellite Altimetry Nontidal Residual (NTR) Data Release
+# Global Tide Gauge-Satellite Altimetry Nontidal Residual (NTR) Data Release
 
 This repository contains derived datasets used in the analysis in:
 
