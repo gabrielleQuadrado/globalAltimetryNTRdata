@@ -14,9 +14,9 @@ Each file contains a MATLAB structure named `stats`.
 | `ales_vals` | ALES satellite nontidal residual values | meters |
 | `xtrk_vals` | XTRACK satellite nontidal residual values | meters |
 | `cmem_vals` | CMEMS satellite nontidal residual values | meters |
-| `ALES` | ALES performance/statistics structure | mixed |
-| `XTRACK` | XTRACK performance/statistics structure | mixed |
-| `CMEMS` | CMEMS performance/statistics structure | mixed |
+| `ALES` | ALES performance/statistics structure; see product-specific statistics fields in table below | mixed |
+| `XTRACK` | XTRACK performance/statistics structure; see product-specific statistics fields in table below | mixed |
+| `CMEMS` | CMEMS performance/statistics structure; see product-specific statistics fields in table below | mixed |
 | `common_times_datenum` | Common matched timestamps | MATLAB datenum |
 
 ## `data/02_product_specific_timeseries/<PRODUCT>/`
