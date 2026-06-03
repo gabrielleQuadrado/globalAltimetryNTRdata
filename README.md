@@ -35,53 +35,45 @@ docs/
 └── DATA_DICTIONARY.md
 ```
 
-## Data Folders
-
-| Folder                                                                                       | Description                                                                                                                   |
-| -------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| [`data/01_matched_common_timestamps/`](data/01_matched_common_timestamps/)                   | Tide gauge files used for direct comparison across all three satellite altimetry products using common coincident timestamps. |
-| [`data/02_product_specific_timeseries/`](data/02_product_specific_timeseries/)               | Product-specific NTRTG–NTRSAT matched time series for CMEMS, X-TRACK, and ALES.                                               |
-| [`data/02_product_specific_timeseries/CMEMS/`](data/02_product_specific_timeseries/CMEMS/)   | Product-specific matched files for CMEMS.                                                                                     |
-| [`data/02_product_specific_timeseries/XTRACK/`](data/02_product_specific_timeseries/XTRACK/) | Product-specific matched files for X-TRACK.                                                                                   |
-| [`data/02_product_specific_timeseries/ALES/`](data/02_product_specific_timeseries/ALES/)     | Product-specific matched files for ALES.                                                                                      |
-| [`data/03_tg_percentile_thresholds/`](data/03_tg_percentile_thresholds/)                     | Tide gauge-based percentile thresholds used to define extreme NTRTG values.                                                   |
-| [`docs/DATA_DICTIONARY.md`](docs/DATA_DICTIONARY.md)                                         | Description of file contents, variables, and units.                                                                           |
-
 ## Dataset Descriptions
 
 ### Common-timestamp product comparison files
 
-[`data/01_matched_common_timestamps/`](data/01_matched_common_timestamps/) contains individual tide gauge files used to compare CMEMS, X-TRACK, and ALES at common coincident timestamps. These files support the direct inter-product comparison of satellite altimetry performance relative to tide gauge-derived nontidal residuals.
+[`data/01_matched_common_timestamps/`](data/01_matched_common_timestamps/) contains individual tide gauge site-level `.mat` files used for direct comparison of CMEMS, X-TRACK, and ALES. Each file includes matched tide gauge-derived nontidal residuals (`NTRTG`) and satellite-derived nontidal residuals (`NTRSAT`) from all three products at common coincident timestamps.
+
+These files are intended for analyses where all three satellite altimetry products are compared using the same tide gauge sites and the same matched times.
 
 Each `.mat` file contains a MATLAB structure named `stats`, including:
 
-* tide gauge-derived nontidal residuals;
-* satellite-derived nontidal residuals from ALES, X-TRACK, and CMEMS;
-* common timestamps shared by the tide gauge and all three satellite products;
+* `NTRTG` values from the tide gauge record;
+* `NTRSAT` values from ALES, X-TRACK, and CMEMS;
+* common timestamps shared by the tide gauge record and all three satellite products;
 * product-specific performance statistics.
 
-### Product-specific matched time series
+### Product-specific matched NTR time series
 
-[`data/02_product_specific_timeseries/`](data/02_product_specific_timeseries/) contains product-specific NTRTG–NTRSAT matched time series. These files are organized by altimetry product and are used for analyses where each product is evaluated independently.
+[`data/02_product_specific_timeseries/`](data/02_product_specific_timeseries/) contains individual tide gauge site-level `.mat` files with matched `NTRTG–NTRSAT` time series for each satellite altimetry product. Files are organized by product: [`CMEMS`](data/02_product_specific_timeseries/CMEMS/), [`XTRACK`](data/02_product_specific_timeseries/XTRACK/), and [`ALES`](data/02_product_specific_timeseries/ALES/).
+
+These files are intended for analyses where each satellite product is evaluated independently, without requiring common timestamps across CMEMS, X-TRACK, and ALES.
 
 Each `.mat` file contains a MATLAB structure named `stats`, including:
 
-* tide gauge-derived nontidal residuals;
-* satellite-derived nontidal residuals for one altimetry product;
-* matched timestamps;
-* performance metrics including Pearson correlation coefficient, root-mean-square error, bias, Kling-Gupta efficiency, and Modified Mielke Index.
+* `NTRTG` values from the tide gauge record;
+* `NTRSAT` values from one satellite altimetry product;
+* matched timestamps for the `NTRTG–NTRSAT` pairs;
+* performance metrics, including Pearson correlation coefficient, root-mean-square error, bias, Kling-Gupta efficiency, and Modified Mielke Index.
 
 ### Tide gauge percentile thresholds
 
-[`data/03_tg_percentile_thresholds/`](data/03_tg_percentile_thresholds/) contains tide gauge-based percentile thresholds used to identify extreme nontidal residuals.
+[`data/03_tg_percentile_thresholds/`](data/03_tg_percentile_thresholds/) contains individual tide gauge site-level `.mat` files with percentile thresholds computed from the empirical `NTRTG` distribution. These thresholds are used to identify extreme tide gauge-derived nontidal residual values.
 
 Each `.mat` file contains:
 
-* `pVals`: NTRTG threshold magnitudes in meters;
+* `pVals`: `NTRTG` threshold magnitudes in meters;
 * `pctLst`: percentile levels;
 * `st`: tide gauge station name.
 
-Extreme NTRTG values are defined as hourly exceedances above percentile thresholds of the empirical NTRTG distribution.
+Extreme `NTRTG` values are defined as hourly exceedances above these percentile thresholds.
 
 ## Documentation
 
