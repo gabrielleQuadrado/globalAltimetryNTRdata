@@ -1,0 +1,17 @@
+# Internal/private curation metadata
+metadata/
+
+# MATLAB temporary/autosave files
+*.asv
+*.m~
+*.slxc
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Keep .mat files because this is a curated data repository
+# *.mat
