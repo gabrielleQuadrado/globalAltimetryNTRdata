@@ -10,10 +10,10 @@ Each file contains a MATLAB structure named `stats`.
 | `tg_id` | Tide-gauge station identifier | none |
 | `lonlat` | Longitude and latitude of tide gauge | degrees |
 | `datapointsnum` | Number of matched hourly observations | count |
-| `tg_vals` | Tide-gauge non-tidal residual values | meters |
-| `ales_vals` | ALES satellite non-tidal residual values | meters |
-| `xtrk_vals` | XTRACK satellite non-tidal residual values | meters |
-| `cmem_vals` | CMEMS satellite non-tidal residual values | meters |
+| `tg_vals` | Tide-gauge nontidal residual values | meters |
+| `ales_vals` | ALES satellite nontidal residual values | meters |
+| `xtrk_vals` | XTRACK satellite nontidal residual values | meters |
+| `cmem_vals` | CMEMS satellite nontidal residual values | meters |
 | `ALES` | ALES performance/statistics structure | mixed |
 | `XTRACK` | XTRACK performance/statistics structure | mixed |
 | `CMEMS` | CMEMS performance/statistics structure | mixed |
@@ -33,13 +33,13 @@ Each file contains a MATLAB structure named `stats`.
 | `bias` | Mean bias | meters |
 | `mmi` | Modified mean index | unitless |
 | `datapointsnum` | Number of matched observations | count |
-| `tg_vals` | Tide-gauge non-tidal residual values | meters |
-| `sat_vals` | Satellite non-tidal residual values | meters |
+| `tg_vals` | Tide-gauge nontidal residual values | meters |
+| `sat_vals` | Satellite nontidal residual values | meters |
 | `timenum` | Matched timestamps | MATLAB datenum |
 
 ## `data/03_tg_percentile_thresholds/`
 
-Each file contains tide-gauge-based percentile thresholds used to identify extreme non-tidal residual values.
+Each file contains tide-gauge-based percentile thresholds used to identify extreme nontidal residual values.
 
 | Variable | Description | Units |
 |---|---|---|
