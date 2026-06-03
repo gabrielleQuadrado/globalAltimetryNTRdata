@@ -43,6 +43,6 @@ Each file contains tide gauge-based percentile thresholds used to identify extre
 
 | Variable | Description | Units |
 |---|---|---|
-| `pVals` | Nontidal residual threshold magnitudes | meters |
-| `pctLst` | Percentile levels corresponding to `pVals` | percentile rank |
+| `pVals` | Nontidal residual threshold magnitude | meters |
+| `pctLst` | Percentile level corresponding to `pVals` | percentile rank |
 | `st` | Tide gauge station name | none |
