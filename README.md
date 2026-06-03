@@ -1,6 +1,6 @@
 # Global Satellite Altimetry Nontidal Residual (NTR) Data Release
 
-This repository contains derived datasets supporting the analysis in:
+This repository contains derived datasets used in the analysis in:
 
 **Quadrado, G. P., Wahl, T., Enriquez, A. R., Nagaraj, M., Passaro, M., & Haigh, I. D.** Global Assessment of Satellite Altimetry for Observing Extreme Coastal Sea Levels. *Communications Earth & Environment*.
 
@@ -8,17 +8,17 @@ This repository contains derived datasets supporting the analysis in:
 
 This data release provides tide gauge–satellite altimetry matched nontidal residual (NTR) datasets used to evaluate the ability of along-track satellite altimetry products to reproduce tide gauge-derived nontidal residual variability along global coastlines.
 
-The datasets include satellite-derived nontidal residual (NTRSAT) time series from three altimetry products:
+The datasets include satellite-derived nontidal residual (NTR<sub>SAT</sub>) time series from three altimetry products:
 
-* Copernicus Marine Service L3 Sea Surface Heights (CMEMS) 
+* Copernicus Marine Service L3 Sea Surface Heights (CMEMS)
 * X-TRACK L2P v2.2 Sea Level Anomaly (X-TRACK)
 * Adaptive Leading Edge Subwaveform Sea Surface Heights v56 (ALES)
 
 The data release includes:
 
-* common-timestamp NTRTG–NTRSAT files used for direct comparison across CMEMS, X-TRACK, and ALES;
-* product-specific NTRTG–NTRSAT matched time series used for analyses that do not require common timestamps across products;
-* tide gauge-based NTRTG percentile thresholds used to identify extreme nontidal residual values.
+* common-timestamp NTR<sub>TG</sub>–NTR<sub>SAT</sub> files used for direct comparison across CMEMS, X-TRACK, and ALES;
+* product-specific NTR<sub>TG</sub>–NTR<sub>SAT</sub> matched time series used for analyses that do not require common timestamps across products;
+* tide gauge-based NTR<sub>TG</sub> percentile thresholds used to identify extreme nontidal residual values.
 
 ## Repository Structure
 
@@ -37,43 +37,43 @@ docs/
 
 ## Dataset Descriptions
 
-### Common-timestamp product comparison files
+### Common-Timestamp Matched NTR<sub>TG</sub>–NTR<sub>SAT</sub> Time Series
 
-[`data/01_matched_common_timestamps/`](data/01_matched_common_timestamps/) contains individual tide gauge site-level `.mat` files used for direct comparison of CMEMS, X-TRACK, and ALES. Each file includes matched tide gauge-derived nontidal residuals (`NTRTG`) and satellite-derived nontidal residuals (`NTRSAT`) from all three products at common coincident timestamps.
+[`data/01_matched_common_timestamps/`](data/01_matched_common_timestamps/) contains individual tide gauge site-level `.mat` files used for direct comparison of CMEMS, X-TRACK, and ALES. Each file includes matched tide gauge-derived nontidal residuals (NTR<sub>TG</sub>) and satellite-derived nontidal residuals (NTR<sub>SAT</sub>) from all three products at common coincident timestamps.
 
 These files are intended for analyses where all three satellite altimetry products are compared using the same tide gauge sites and the same matched times.
 
 Each `.mat` file contains a MATLAB structure named `stats`, including:
 
-* `NTRTG` values from the tide gauge record;
-* `NTRSAT` values from ALES, X-TRACK, and CMEMS;
+* NTR<sub>TG</sub> values from the tide gauge record;
+* NTR<sub>SAT</sub> values from ALES, X-TRACK, and CMEMS;
 * common timestamps shared by the tide gauge record and all three satellite products;
 * product-specific performance statistics.
 
-### Product-specific matched NTR time series
+### Product-Specific Matched NTR<sub>TG</sub>–NTR<sub>SAT</sub> Time Series
 
-[`data/02_product_specific_timeseries/`](data/02_product_specific_timeseries/) contains individual tide gauge site-level `.mat` files with matched `NTRTG–NTRSAT` time series for each satellite altimetry product. Files are organized by product: [`CMEMS`](data/02_product_specific_timeseries/CMEMS/), [`XTRACK`](data/02_product_specific_timeseries/XTRACK/), and [`ALES`](data/02_product_specific_timeseries/ALES/).
+[`data/02_product_specific_timeseries/`](data/02_product_specific_timeseries/) contains individual tide gauge site-level `.mat` files with matched NTR<sub>TG</sub>–NTR<sub>SAT</sub> time series for each satellite altimetry product. Files are organized by product: [`CMEMS`](data/02_product_specific_timeseries/CMEMS/), [`XTRACK`](data/02_product_specific_timeseries/XTRACK/), and [`ALES`](data/02_product_specific_timeseries/ALES/).
 
 These files are intended for analyses where each satellite product is evaluated independently, without requiring common timestamps across CMEMS, X-TRACK, and ALES.
 
 Each `.mat` file contains a MATLAB structure named `stats`, including:
 
-* `NTRTG` values from the tide gauge record;
-* `NTRSAT` values from one satellite altimetry product;
-* matched timestamps for the `NTRTG–NTRSAT` pairs;
+* NTR<sub>TG</sub> values from the tide gauge record;
+* NTR<sub>SAT</sub> values from one satellite altimetry product;
+* matched timestamps for the NTR<sub>TG</sub>–NTR<sub>SAT</sub> pairs;
 * performance metrics, including Pearson correlation coefficient, root-mean-square error, bias, Kling-Gupta efficiency, and Modified Mielke Index.
 
-### Tide gauge percentile thresholds
+### Tide Gauge Percentile Thresholds
 
-[`data/03_tg_percentile_thresholds/`](data/03_tg_percentile_thresholds/) contains individual tide gauge site-level `.mat` files with percentile thresholds computed from the empirical `NTRTG` distribution. These thresholds are used to identify extreme tide gauge-derived nontidal residual values.
+[`data/03_tg_percentile_thresholds/`](data/03_tg_percentile_thresholds/) contains individual tide gauge site-level `.mat` files with percentile thresholds computed from the empirical NTR<sub>TG</sub> distribution. These thresholds are used to identify extreme tide gauge-derived nontidal residual values.
 
 Each `.mat` file contains:
 
-* `pVals`: `NTRTG` threshold magnitudes in meters;
-* `pctLst`: percentile levels;
+* `pVals`: NTR<sub>TG</sub> threshold magnitudes in meters;
+* `pctLst`: percentile ranks corresponding to `pVals`;
 * `st`: tide gauge station name.
 
-Extreme `NTRTG` values are defined as hourly exceedances above these percentile thresholds.
+Extreme NTR<sub>TG</sub> values are defined as hourly exceedances above these percentile thresholds.
 
 ## Documentation
 
