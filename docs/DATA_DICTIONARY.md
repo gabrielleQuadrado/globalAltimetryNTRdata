@@ -31,7 +31,7 @@ Each file contains a MATLAB structure named `stats`.
 | `pear_corr` | Pearson correlation coefficient | unitless |
 | `kge` | Kling-Gupta efficiency | unitless |
 | `bias` | Mean bias | meters |
-| `mmi` | Modified mean index | unitless |
+| `mmi` | Modified Mielke Index | unitless |
 | `datapointsnum` | Number of matched observations | count |
 | `tg_vals` | Tide-gauge nontidal residual values | meters |
 | `sat_vals` | Satellite nontidal residual values | meters |
