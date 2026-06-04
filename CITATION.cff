@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+type: dataset
+message: "If you use these datasets, please cite the associated paper and the archived Zenodo version of this repository."
+title: "Global Tide Gauge-Satellite Altimetry Nontidal Residual (NTR) Data Release"
+authors:
+  - family-names: "Quadrado"
+    given-names: "Gabrielle P."
+  - family-names: "Wahl"
+    given-names: "Thomas"
+  - family-names: "Enriquez"
+    given-names: "A. R."
+  - family-names: "Nagaraj"
+    given-names: "M."
+  - family-names: "Passaro"
+    given-names: "M."
+  - family-names: "Haigh"
+    given-names: "I. D."
+repository-code: "https://github.com/gabrielleQuadrado/globalAltimetryNTRdata"
+abstract: "This data release contains matched tide gauge-derived and satellite-derived nontidal residual time series used to evaluate the ability of along-track satellite altimetry products to reproduce coastal sea-level variability and extremes along global coastlines."
+keywords:
+  - satellite altimetry
+  - coastal altimetry
+  - tide gauges
+  - nontidal residuals
+  - extreme sea levels
+  - coastal hazards
+license: "CC-BY-4.0"
+version: "1.0.0"
