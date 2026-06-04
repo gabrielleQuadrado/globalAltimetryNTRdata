@@ -1,4 +1,5 @@
 # Global Tide Gauge-Satellite Altimetry Nontidal Residual (NTR) Data Release
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20543274.svg)](https://doi.org/10.5281/zenodo.20543274)
 
 This repository contains derived datasets used in the analyses in:
 
@@ -85,4 +86,4 @@ A data dictionary describing the file contents, variables, and units is availabl
 
 Please cite the associated paper and the archived Zenodo version of this repository when using these datasets.
 
-The Zenodo DOI will be added after the final repository release.
+Archived data release: https://doi.org/10.5281/zenodo.20543274
